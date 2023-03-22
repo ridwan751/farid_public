@@ -17,18 +17,21 @@ body {
 
 .container {
     width: 100%;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     background-color: var(--bg-primary);
 }
 
 .wrapper {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
-    height: auto;
+    align-items: center;
 }
 
 .card {
+    width: 40%;
     border: 1px solid white;
     background-color: var(--bg-secondary);
     color: var(--txt-secondary);
@@ -72,17 +75,12 @@ body {
     transition: 0.3s ease-in-out
 }
 
-.child {
-    border: 1px solid white;
-    background-color: var(--bg-secondary);
-    color: var(--txt-secondary);
-    padding: 32px;
-    margin: 8px;
-    top: 50%;
-    left: 50%;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
+@media  (max-width: 476px) {
+    .card {
+        width: 80%;
+    }
 
-.ke2 {
-    margin-top: 100px;
+    .title {
+        font-size: 3em;
+    }
 }
